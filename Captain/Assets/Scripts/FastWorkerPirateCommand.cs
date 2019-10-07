@@ -6,7 +6,7 @@ using Captain.Command;
 
 namespace Captain.Command
 {
-    public class SlowWorkerPirateCommand : ScriptableObject, IPirateCommand
+    public class FastWorkerPirateCommand : ScriptableObject, IPirateCommand
     {
         private float currentTime = 0;
         private float lastTime = 0; 
@@ -26,7 +26,7 @@ namespace Captain.Command
             {
                 currentTime = 0;
                 lastTime = 0;
-                workTime = Random.Range(20.0f, 40.0f);
+                workTime = Random.Range(5.0f, 10.0f);
                 newLoop = false;
             }
             //now worktime expired
@@ -35,7 +35,7 @@ namespace Captain.Command
                 return false;
             }
             //per 8 sec
-            if(currentTime - lastTime > 8)
+            if(currentTime - lastTime > 2)
             {
                 lastTime = currentTime;
                 //make random position
