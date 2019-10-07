@@ -26,6 +26,6 @@ public class PirateController : MonoBehaviour
     //Has received motivation. A likely source is from on of the Captain's morale inducements.
     public void Motivate()
     {
-        this.ActiveCommand = Object.Instantiate(ScriptableObject.CreateInstance<NoWorkPirateCommand>());
+        this.ActiveCommand = Object.Instantiate(ScriptableObject.CreateInstance<SlowWorkerPirateCommand>());
     }
 }
